@@ -125,6 +125,12 @@ body {
     font-size: 2.5rem;
 }
 
+.link-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 .link-text {
     font-size: 1.2rem;
     font-weight: 600;
