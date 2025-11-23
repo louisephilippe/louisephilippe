@@ -107,6 +107,13 @@ body {
     letter-spacing: -0.02em;
 }
 
+.profile-handle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: -0.2rem;
+}
+
 .profile-bio {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -147,6 +154,17 @@ body {
     margin-top: 1rem;
 }
 
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     .bento-grid {
@@ -158,6 +176,13 @@ body {
         flex-direction: column;
         text-align: center;
         padding: 2rem;
+    }
+
+    .profile-name {
+        font-size: 1.8rem;
+        /* Reduced from 2.5rem */
+        word-wrap: break-word;
+        /* Ensure it breaks if absolutely necessary, but size should prevent it */
     }
 
     .link-card {
