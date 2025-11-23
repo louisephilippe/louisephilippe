@@ -12,7 +12,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=1">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <div class="card profile-card">
                 <div class="profile-image-container">
                     <!-- <div class="profile-image-placeholder">LP</div> -->
-                    <img src="profile-photo.jpeg" alt="Profile Picture" class="profile-image">
+                    <img src="photo-asset/profile-photo.jpeg" alt="Profile Picture" class="profile-image">
                 </div>
                 <div class="profile-info">
                     <h1 class="profile-name">Louise Philippe Dulay</h1>
@@ -47,30 +47,30 @@
             <!-- Links -->
             <a href="https://www.facebook.com/louisephilippe/" class="card link-card facebook" target="_blank"
                 rel="noopener noreferrer">
-                <img src="facebook.png" alt="Facebook" class="link-icon-img">
+                <img src="photo-asset/facebook.png" alt="Facebook" class="link-icon-img">
                 <span class="link-text">Facebook</span>
             </a>
 
             <a href="https://www.instagram.com/louisephilippe/" class="card link-card instagram" target="_blank"
                 rel="noopener noreferrer">
-                <img src="instagram.png" alt="Instagram" class="link-icon-img">
+                <img src="photo-asset/instagram.png" alt="Instagram" class="link-icon-img">
                 <span class="link-text">Instagram</span>
             </a>
 
             <a href="https://www.linkedin.com/in/louisephilippe/" class="card link-card linkedin" target="_blank"
                 rel="noopener noreferrer">
-                <img src="linkedin.png" alt="LinkedIn" class="link-icon-img">
+                <img src="photo-asset/linkedin.png" alt="LinkedIn" class="link-icon-img">
                 <span class="link-text">LinkedIn</span>
             </a>
 
             <a href="https://x.com/louisephilippe" class="card link-card twitter" target="_blank"
                 rel="noopener noreferrer">
-                <img src="x.png" alt="X" class="link-icon-img">
+                <img src="photo-asset/x.png" alt="X" class="link-icon-img">
                 <span class="link-text">X</span>
             </a>
 
-            <a href="mailto:mail@louisephilippe.com" class="card link-card email">
-                <img src="email.png" alt="Email" class="link-icon-img">
+            <a href="mailto:louise@louisephilippe.com" class="card link-card email">
+                <img src="photo-asset/email.png" alt="Email" class="link-icon-img">
                 <span class="link-text">Email</span>
             </a>
 
@@ -86,11 +86,34 @@
                 <span class="link-text">YouTube</span>
             </a> -->
 
+            <a href="https://www.threads.net/@louisephilippe" class="card link-card threads" target="_blank"
+                rel="noopener noreferrer">
+                <img src="photo-asset/threads.png" alt="Threads" class="link-icon-img">
+                <span class="link-text">Threads</span>
+            </a>
+
+            <a href="#" id="qrph-link" class="card link-card qrph">
+                <img src="photo-asset/qrph.png" alt="QRPh" class="link-icon-img">
+                <span class="link-text">Pay via QRPh</span>
+            </a>
+
             <a href="https://louisephilippe.com/" class="card link-card website" target="_blank"
                 rel="noopener noreferrer">
-                <img src="safari.png" alt="Website" class="link-icon-img">
+                <img src="photo-asset/safari.png" alt="Website" class="link-icon-img">
                 <span class="link-text">Website</span>
             </a>
+        </div>
+
+        <!-- QRPh Modal -->
+        <div id="qrph-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Scan to Pay</h2>
+                <div class="qr-container">
+                    <img src="photo-asset/qr-code-large.png" alt="QRPh Code" class="qr-code-img">
+                </div>
+                <p class="qr-description">Scan this QR code to pay via QRPh.</p>
+            </div>
         </div>
 
         <footer class="site-footer">
