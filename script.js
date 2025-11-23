@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Maintenance Mode Toggle
-    const MAINTENANCE_MODE = true; // Set to true to enable maintenance banner
+    const MAINTENANCE_MODE = false; // Set to true to enable maintenance banner
 
     if (MAINTENANCE_MODE) {
         const banner = document.getElementById('maintenance-banner');
