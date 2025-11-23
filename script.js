@@ -75,4 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupModal('qrph-modal', 'qrph-link', '.close-modal');
     setupModal('about-modal', 'about-link', '.close-modal');
+    setupModal('website-modal', 'website-link', '.close-modal');
 });
