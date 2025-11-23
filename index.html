@@ -13,6 +13,7 @@
     <meta http-equiv="Expires" content="0">
 
     <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="icon" href="photo-asset/profile-photo.jpeg" type="image/jpeg">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
             <!-- Announcement Box (Hidden by default) -->
             <div id="announcement-box" class="card announcement-card hidden">
                 <div class="announcement-content">
-                    <h2>Hi 👋, welcome to my corner on the web</h2>
+                    <h2>Hi, I'm Louise</h2>
                     <p>All the links below are my verified social media pages. Follow along for the latest updates!</p>
                 </div>
                 <a href="#" class="announcement-button">Learn More</a>
@@ -107,18 +108,34 @@
         <!-- QRPh Modal -->
         <div id="qrph-modal" class="modal hidden">
             <div class="modal-content">
-                <span class="close-modal">&times;</span>
+                <span class="close-modal" id="close-qrph">&times;</span>
                 <h2>Scan to Pay</h2>
                 <div class="qr-container">
                     <img src="photo-asset/qr-code-large.png" alt="QRPh Code" class="qr-code-img">
                 </div>
-                <p class="qr-description">Scan this QR code to pay via QRPh. Transfer fees may apply. *GCash transfers are free</p>
+                <p class="qr-description">Scan this QR code to pay via QRPh.</p>
+            </div>
+        </div>
+
+        <!-- About Modal -->
+        <div id="about-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal" id="close-about">&times;</span>
+                <h2>About</h2>
+                <p class="qr-description">
+                    This site serves as a central hub for all my verified social media profiles,
+                    payments, and contact
+                    information.
+                </p>
+                <br>
+                <p class="qr-description" style="font-size: 0.8rem;">Icons by <a href="https://icons8.com"
+                        target="_blank" rel="noopener noreferrer">Icons8</a></p>
             </div>
         </div>
 
         <footer class="site-footer">
             <p>&copy; <span id="year"></span> <a href="https://louisephilippe.com/" class="footer-link">Louise Philippe
-                    Dulay</a>. All rights reserved.</p>
+                    Dulay</a>. All rights reserved. | <a href="#" id="about-link" class="footer-link">About</a></p>
         </footer>
     </div>
 

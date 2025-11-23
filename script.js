@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Maintenance Mode Toggle
-    const MAINTENANCE_MODE = false; // Set to true to enable maintenance banner
+    const MAINTENANCE_MODE = true; // Set to true to enable maintenance banner
 
     if (MAINTENANCE_MODE) {
         const banner = document.getElementById('maintenance-banner');
@@ -35,39 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // QRPh Modal Logic
-    const qrModal = document.getElementById('qrph-modal');
-    const qrLink = document.getElementById('qrph-link');
-    const closeBtn = document.querySelector('.close-modal');
+    // Modal Logic (QRPh and License)
+    const setupModal = (modalId, linkId, closeClass) => {
+        const modal = document.getElementById(modalId);
+        const link = document.getElementById(linkId);
+        const closeBtn = modal ? modal.querySelector(closeClass) : null;
 
-    if (qrModal && qrLink && closeBtn) {
-        // Open modal
-        qrLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            qrModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        });
+        if (modal && link && closeBtn) {
+            // Open modal
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
 
-        // Close modal with button
-        closeBtn.addEventListener('click', () => {
-            qrModal.classList.add('hidden');
-            document.body.style.overflow = '';
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === qrModal) {
-                qrModal.classList.add('hidden');
+            // Close modal with button
+            closeBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
                 document.body.style.overflow = '';
-            }
-        });
+            });
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !qrModal.classList.contains('hidden')) {
-                qrModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        });
-    }
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    };
+
+    setupModal('qrph-modal', 'qrph-link', '.close-modal');
+    setupModal('about-modal', 'about-link', '.close-modal');
 });
