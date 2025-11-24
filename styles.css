@@ -284,6 +284,11 @@ body.maintenance-active {
     /* Match expanded text color */
 }
 
+.announcement-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .announcement-card:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
@@ -365,6 +370,10 @@ body.maintenance-active {
 
     .announcement-card.expanded {
         padding: 4rem 1.5rem;
+    }
+
+    .announcement-content h2 {
+        font-size: 1.0rem;
     }
 }
 
