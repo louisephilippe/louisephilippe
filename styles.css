@@ -235,6 +235,93 @@ body {
     .link-icon {
         font-size: 1.5rem;
     }
+
+    .verify-url {
+        font-size: 0.7rem;
+    }
+}
+
+/* Privacy Policy Page */
+.policy-content {
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.policy-intro {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.policy-section {
+    margin-bottom: 2rem;
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+}
+
+.policy-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+}
+
+.policy-section>p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.policy-section a {
+    color: #007aff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.policy-section a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.policy-service {
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.policy-service h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.policy-service p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .policy-content {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .policy-heading {
+        font-size: 1.1rem;
+    }
+
+    .policy-service {
+        padding: 1rem;
+    }
 }
 
 /* Maintenance Banner */
