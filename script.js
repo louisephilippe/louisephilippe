@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Modal Logic (QRPh and License)
+    // Modal Logic (Instapay and License)
     const setupModal = (modalId, linkId, closeClass) => {
         const modal = document.getElementById(modalId);
         const link = document.getElementById(linkId);
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    setupModal('qrph-modal', 'qrph-link', '.close-modal');
+    setupModal('instapay-modal', 'instapay-link', '.close-modal');
     setupModal('about-modal', 'about-link', '.close-modal');
     setupModal('website-modal', 'website-link', '.close-modal');
 
