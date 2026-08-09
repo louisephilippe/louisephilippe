@@ -64,9 +64,16 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
+/* Profile Group */
+.profile-group {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Profile Card - Modern Hero Banner Global */
 .profile-card {
-    grid-column: span 4;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -345,6 +352,49 @@ body.maintenance-active {
     /* Adjust based on banner height */
 }
 
+/* Highlight Card */
+.highlight-card {
+    background-color: #007aff;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    padding-bottom: 3.5rem;
+    margin-bottom: -2.5rem;
+    text-align: left;
+    z-index: 1;
+    border-radius: 28px 28px 0 0;
+}
+
+.highlight-card:hover {
+    transform: none;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.highlight-card p {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.highlight-button {
+    background-color: #ffffff;
+    color: #007aff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.highlight-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
+}
+
 /* Announcement Card */
 .announcement-card {
     grid-column: span 4;
@@ -585,8 +635,18 @@ body.maintenance-active {
         gap: 0.5rem;
     }
 
-    .profile-card {
+    .profile-group {
         grid-column: span 1;
+    }
+
+    .highlight-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        padding-bottom: 4rem;
+        margin-bottom: -2.75rem;
+        border-radius: 28px 28px 0 0;
     }
 
     .announcement-card {
@@ -659,6 +719,15 @@ body.maintenance-active {
         gap: 1rem;
     }
 
+    .profile-group {
+        grid-column: span 4;
+    }
+
+    .highlight-card {
+        padding: 1.25rem 1.5rem;
+        padding-bottom: 3.5rem;
+    }
+
     .announcement-card {
         grid-column: span 4;
         padding: 1.5rem;
@@ -703,6 +772,12 @@ body.maintenance-active {
     }
 
     /* 1. Profile Card is styled globally */
+
+    .highlight-card {
+        padding: 1.25rem 2rem;
+        padding-bottom: 3.5rem;
+        border-radius: 28px 28px 0 0;
+    }
 
     /* 2. Announcement Card - Center Below Profile */
     .announcement-card {
