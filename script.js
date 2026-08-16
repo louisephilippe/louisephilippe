@@ -191,4 +191,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // Email Obfuscation Logic
+    const emailCards = document.querySelectorAll('.email.card');
+    emailCards.forEach(card => {
+        // Construct the href dynamically on interaction to avoid static scraping
+        const setupEmailLink = function() {
+            const user = this.getAttribute('data-contact');
+            const domain = this.getAttribute('data-domain');
+            if (user && domain && this.getAttribute('href') === '#') {
+                this.setAttribute('href', `mailto:${user}@${domain}`);
+            }
+        };
+        
+        card.addEventListener('mouseover', setupEmailLink);
+        card.addEventListener('touchstart', setupEmailLink);
+        card.addEventListener('click', setupEmailLink);
+    });
 });

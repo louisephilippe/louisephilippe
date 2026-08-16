@@ -70,8 +70,7 @@
 
             <div class="policy-section">
                 <h2 class="policy-heading">4. Contact Us</h2>
-                <p>If you have questions about this policy, please contact us at: <a
-                        href="mailto:mail@louisephilippe.com">mail@louisephilippe.com</a></p>
+                <p>If you have questions about this policy, please contact us at: <a href="#" data-contact="mail" data-domain="louisephilippe.com" class="email-link">mail@louisephilippe.com</a></p>
             </div>
         </div>
 
@@ -86,6 +85,22 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Email Obfuscation Logic
+        const emailLinks = document.querySelectorAll('.email-link');
+        emailLinks.forEach(link => {
+            const setupEmailLink = function() {
+                const user = this.getAttribute('data-contact');
+                const domain = this.getAttribute('data-domain');
+                if (user && domain && this.getAttribute('href') === '#') {
+                    this.setAttribute('href', `mailto:${user}@${domain}`);
+                }
+            };
+            
+            link.addEventListener('mouseover', setupEmailLink);
+            link.addEventListener('touchstart', setupEmailLink);
+            link.addEventListener('click', setupEmailLink);
+        });
     </script>
 </body>
 
